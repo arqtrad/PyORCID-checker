@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pyorcid_checksum"
-version = "0.1.0"
+version = "0.1.1"
 description = "A simple Python Library for checking the validilty of ORCID and ORCID IDs"
 authors = ["kenlhlui <kenlh.lui@utoronto.ca>"]
 license = "MIT"
@@ -10,9 +10,11 @@ packages = [
     {include = "pyorcid_checksum", from="src"}
 ]
 
-[tool.poetry.dependencies]
-python = "^3.14"
-pytest = "^9.0.3"
+[project]
+dependencies = [
+	"python (>=3.10,<=3.14)",
+	"pytest (>=8.3.2,<=9.0.3)"
+]
 
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.29.5"
